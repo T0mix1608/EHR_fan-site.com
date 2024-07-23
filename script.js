@@ -1,62 +1,50 @@
-body {
-    font-family: Arial, sans-serif;
-    background: url('https://i.postimg.cc/bvNTPn19/image.png') no-repeat center center fixed;
-    background-size: cover;
-    color: white;
-    margin: 0;
-    padding: 0;
-}
+document.addEventListener('DOMContentLoaded', function() {
+    const userLang = navigator.language || navigator.userLanguage;
+    const mobileWarningElement = document.getElementById('mobile-warning');
+    
+    
+    const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+    
+    if (isMobile) {
+        mobileWarningElement.innerText = {
+            en: "Sorry, but mobiles cannot download the mod. Please join a lobby with this mod!",
+            pt: "Desculpe, mas dispositivos móveis não conseguem baixar o mod. Tente entrar no lobby de alguém com esse mod!",
+            ru: "Извините, но на мобильных устройствах нельзя скачать мод. Пожалуйста, присоединитесь к лобби с этим модом!"
+        }[userLang] || "Sorry, but mobiles cannot download the mod. Please join a lobby with this mod!";
+    }
 
-.container {
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 20px;
-    border-radius: 8px;
-    max-width: 800px;
-    margin: 20px auto;
-    text-align: center;
-}
+    const welcomeElement = document.getElementById('welcome');
+    const descriptionElement = document.getElementById('description');
+    const aboutElement = document.getElementById('about');
+    const updateElement = document.getElementById('update');
+    
+    const translations = {
+        en: {
+            welcome: "Welcome to the Endless Host Roles Website!",
+            description: "Endless Host Roles (EHR), the largest host-only mod for Among Us, was created by the ingenious Gurge44. Initially named TOHE Plus (TOHE+), as it was a modification of TOHE (Town Of Host), the mod now features significantly more roles and options than its first version, and Gurge continues to update it regularly.",
+            about: "EHR is the most extensive host-only mod for Among Us, featuring over 350 roles and 7 game modes. It also includes a Custom Team Assigner application to fully customize your games!",
+            update: "We will always keep you updated about the versions."
+        },
+        pt: {
+            welcome: "Bem-vindo ao site do Endless Host Roles!",
+            description: "Endless Host Roles (EHR), o maior mod exclusivo para anfitriões de Among Us, foi criado pelo genial Gurge44. Inicialmente chamado de TOHE Plus (TOHE+), por ser uma modificação do TOHE (Town Of Host), o mod agora possui significativamente mais papéis e opções do que sua versão inicial, e Gurge continua a atualizá-lo regularmente.",
+            about: "EHR é o mod mais extenso para anfitriões de Among Us, com mais de 350 papéis e 7 modos de jogo. Ele também inclui um aplicativo Custom Team Assigner para personalizar totalmente seus jogos!",
+            update: "Sempre iremos te atualizar sobre as versões."
+        },
+        ru: {
+            welcome: "Добро пожаловать на сайт Endless Host Roles!",
+            description: "Endless Host Roles (EHR), самый большой мод только для хостов в Among Us, был создан гениальным Gurge44. Изначально названный TOHE Plus (TOHE+), поскольку это была модификация TOHE (Town Of Host), мод теперь включает значительно больше ролей и опций, чем его первая версия, и Gurge продолжает регулярно обновлять его.",
+            about: "EHR - это самый обширный мод только для хостов в Among Us, с более чем 350 ролями и 7 режимами игры. Также включает приложение Custom Team Assigner для полной настройки ваших игр!",
+            update: "Мы всегда будем держать вас в курсе версий."
+        }
+    };
+    
+    const translate = (element, key) => {
+        element.innerText = translations[userLang] ? translations[userLang][key] : translations.en[key];
+    };
 
-header img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-h1, h2 {
-    color: #FFD700;
-}
-
-a {
-    color: #1e90ff;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-#download-button {
-    display: block;
-    margin: 20px auto;
-}
-
-#download-image {
-    width: 200px; 
-}
-
-#social-links {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 20px;
-}
-
-.social-icon {
-    width: 40px;
-    height: 40px;
-}
-
-#mobile-warning {
-    color: #FF6347; 
-    font-size: 1.2em;
-}
+    translate(welcomeElement, 'welcome');
+    translate(descriptionElement, 'description');
+    translate(aboutElement, 'about');
+    translate(updateElement, 'update');
+});
