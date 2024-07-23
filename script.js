@@ -28,13 +28,13 @@ document.addEventListener('DOMContentLoaded', function() {
         pt: {
             welcome: "Bem-vindo ao site do Endless Host Roles!",
             description: "Endless Host Roles (EHR), o maior mod exclusivo para anfitriões de Among Us, foi criado pelo genial Gurge44. Inicialmente chamado de TOHE Plus (TOHE+), por ser uma modificação do TOHE (Town Of Host), o mod agora possui significativamente mais papéis e opções do que sua versão inicial, e Gurge continua a atualizá-lo regularmente.",
-            about: "EHR é o mod mais extenso para anfitriões de Among Us, com mais de 350 papéis e 7 modos de jogo. Ele também inclui um aplicativo Custom Team Assigner para personalizar totalmente seus jogos!",
+            about: "EHR é o mod mais extenso para anfitriões de Among Us, com mais de 350 funções e 7 modos de jogo. Ele também inclui um aplicativo Custom Team Assigner para personalizar totalmente seus jogos! Lembre-se: Este não é o site oficial. Você pode ver o site oficial pressionando o botão do site abaixo. Para fazer o download, pressione o botão Download",
             update: "Sempre iremos te atualizar sobre as versões."
         },
         ru: {
             welcome: "Добро пожаловать на сайт Endless Host Roles!",
             description: "Endless Host Roles (EHR), самый большой мод только для хостов в Among Us, был создан гениальным Gurge44. Изначально названный TOHE Plus (TOHE+), поскольку это была модификация TOHE (Town Of Host), мод теперь включает значительно больше ролей и опций, чем его первая версия, и Gurge продолжает регулярно обновлять его.",
-            about: "EHR - это самый обширный мод только для хостов в Among Us, с более чем 350 ролями и 7 режимами игры. Также включает приложение Custom Team Assigner для полной настройки ваших игр!",
+            about: "EHR - это самый обширный мод только для хостов в Among Us, с более чем 350 ролями и 7 режимами игры. Также включает приложение Custom Team Assigner для полной настройки ваших игр! Помните: это не официальный сайт. Вы можете увидеть официальный сайт, нажав кнопку сайта внизу. Для загрузки нажмите кнопку «Загрузить»",
             update: "Мы всегда будем держать вас в курсе версий."
         }
     };
