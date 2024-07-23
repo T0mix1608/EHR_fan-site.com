@@ -23,7 +23,7 @@ header img {
 }
 
 h1, h2 {
-    color: #FFD700;
+    color: #FFD700; 
 }
 
 a {
@@ -33,4 +33,30 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+#download-button {
+    display: block;
+    margin: 20px auto;
+}
+
+#download-image {
+    width: 200px; 
+}
+
+#social-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.social-icon {
+    width: 40px; 
+    height: 40px;
+}
+
+#mobile-warning {
+    color: #FF6347; /* Tomato color for mobile warning */
+    font-size: 1.2em;
 }
